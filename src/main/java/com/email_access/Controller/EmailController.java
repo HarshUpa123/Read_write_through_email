@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.mail.MessagingException;
+
 import java.util.List;
 
 @RestController
@@ -24,7 +24,7 @@ public class EmailController {
     private EmailSendingService emailSendingService;
 
     @GetMapping("/fetch-email")
-    public List<EmailResponse> fetchEmail(@RequestBody EmailRequest emailRequest) throws MessagingException {
+    public List<EmailResponse> fetchEmail(@RequestBody EmailRequest emailRequest) throws Exception {
        return emailReadingService.fetchEmail(emailRequest);
     }
 

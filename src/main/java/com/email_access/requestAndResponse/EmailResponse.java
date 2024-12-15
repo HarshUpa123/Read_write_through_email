@@ -1,14 +1,22 @@
 package com.email_access.requestAndResponse;
 
-import lombok.*;
-
-import java.util.List;
+import java.util.Date;
 
 public class EmailResponse {
 
     private String from;
-    private String content;
     private String subjects;
+    private Date date;
+    private String bodyText;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
 
     public String getFrom() {
         return from;
@@ -18,12 +26,12 @@ public class EmailResponse {
         this.from = from;
     }
 
-    public String getContent() {
-        return content;
+    public String getBodyText() {
+        return bodyText;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setBodyText(String bodyText) {
+        this.bodyText = bodyText;
     }
 
     public String getSubjects() {

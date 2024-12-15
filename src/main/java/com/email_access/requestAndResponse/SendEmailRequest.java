@@ -1,8 +1,10 @@
 package com.email_access.requestAndResponse;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SendEmailRequest {
     private String recipientEmail;
     private String subject;
@@ -31,4 +33,25 @@ public class SendEmailRequest {
     public void setBody(String body) {
         this.body = body;
     }
+
+    public String getCc() {
+        return cc;
+    }
+
+    public void setCc(String cc) {
+        this.cc = cc;
+    }
+
+    public String getBcc() {
+        return bcc;
+    }
+
+    public void setBcc(String bcc) {
+        this.bcc = bcc;
+    }
+
+    private String cc;
+    private String bcc;
+
+
 }
